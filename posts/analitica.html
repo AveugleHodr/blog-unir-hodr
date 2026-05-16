@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analítica en videojuegos — Hodr</title>
+  <meta name="description" content="Cómo la analítica de datos transforma el juego profesional en League of Legends y los esports en general." />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand"><span>//</span> Hodr</span>
+  <ul class="nav-links">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="equipos.html">Equipos</a></li>
+    <li><a href="analitica.html" class="active">Analítica</a></li>
+  </ul>
+</nav>
+
+<article class="article-container">
+
+  <a href="../index.html" class="article-back">&#8592; Volver al inicio</a>
+
+  <header class="article-header">
+    <p class="article-meta">03 &mdash; Industria y metodología</p>
+    <h1>Analítica de datos en videojuegos: cómo los números definen la victoria</h1>
+    <p class="lead">El esports moderno ya no se gana solo con reflejos. Los equipos que compiten al más alto nivel usan datos de manera sistemática para preparar estrategias, anticipar rivales y tomar decisiones que el instinto solo no puede sustentar.</p>
+    <div class="article-tags">
+      <span class="tag">Data Science</span>
+      <span class="tag">Estrategia</span>
+      <span class="tag">Meta</span>
+    </div>
+  </header>
+
+  <hr class="article-divider" />
+
+  <div class="article-body">
+
+    <h2>El dato como ventaja competitiva</h2>
+
+    <p>En cualquier deporte de alto rendimiento, la información es una ventaja. El béisbol fue uno de los primeros deportes tradicionales en sistematizar ese principio con la revolución saberométrica documentada en el libro <em>Moneyball</em>: usar estadísticas para identificar valor donde otros no lo ven. Los esports llegaron al mismo lugar, pero con un volumen de datos incomparablemente mayor.</p>
+
+    <p>Una sola partida de League of Legends genera miles de eventos registrables: posiciones en el mapa cada pocos segundos, timing exacto de cada objetivo, daño recibido y entregado por instancia, decisiones de compra de ítems, patrones de movimiento de cada jugador en el mapa. Ese volumen de información, correctamente procesado, es una fotografía detallada de cómo un equipo juega realmente, no cómo cree que juega.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-value">~30min</span>
+        <span class="stat-label">Duración promedio de una partida profesional</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">10</span>
+        <span class="stat-label">Jugadores por partida generando datos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">165+</span>
+        <span class="stat-label">Campeones con estadísticas propias en el meta</span>
+      </div>
+    </div>
+
+    <h2>Qué se analiza en League of Legends profesional</h2>
+
+    <h3>Draft como documento de intenciones</h3>
+
+    <p>El draft es la fase previa al juego donde cada equipo escoge y veta campeones. Para un analista, el draft de un equipo rival es un texto que se puede leer. Hay organizaciones que tienen prioridades consistentes: siempre priorizan un carry en botlane, siempre abren con el mismo pool de vetos, siempre fuerzan el mismo tipo de composición dependiendo de la side que tengan (roja o azul).</p>
+
+    <p>Mapear esos patrones en múltiples partidas permite predecir con probabilidad razonable qué va a hacer un rival antes de que empiece el juego. Eso le da al equipo propio la posibilidad de preparar counters o forzar situaciones en las que el rival esté fuera de su zona de confort.</p>
+
+    <h3>Análisis de early game y economía</h3>
+
+    <p>Los primeros 15 minutos de una partida de League of Legends establecen ventajas de recursos que se traducen en presión de mapa. Las métricas que definen si un equipo tiene un early game sólido incluyen:</p>
+
+    <ul>
+      <li><strong>Gold difference a los 15 minutos (GD@15):</strong> diferencia acumulada de oro entre ambos equipos en el punto de referencia de 15 minutos. Un GD@15 sistemáticamente positivo indica un equipo que convierte eficientemente sus recursos iniciales.</li>
+      <li><strong>First blood y primera torre:</strong> el equipo que obtiene estos objetivos gana estadísticamente la partida a tasas superiores al 60%.</li>
+      <li><strong>Jungle pathing:</strong> la ruta del jungler en los primeros minutos determina qué carriles reciben presión y cuáles son abandonados. Es uno de los datos más ricos para entender la estrategia macro de un equipo.</li>
+    </ul>
+
+    <h3>Objetivos de mapa y macro estrategia</h3>
+
+    <p>El <strong>Dragon</strong> y el <strong>Baron Nashor</strong> son los dos grandes objetivos de mapa en League of Legends. Los datos muestran que los equipos que obtienen tres o más Stacks de dragón ganan a tasas muy superiores, lo que hace que el control de estos objetivos sea una prioridad mensurable, no solo intuitiva.</p>
+
+    <p>Analizar cuándo y cómo un equipo intenta tomar estos objetivos revela su filosofía de juego: si son agresivos y buscan peleas tempranas, si prefieren el control de visión y el asfixiamiento económico, o si dependen de escalar individualmente para ganar teamfights tardíos.</p>
+
+    <h3>Tendencias individuales de los jugadores</h3>
+
+    <p>Más allá del equipo como unidad, cada jugador tiene patrones propios. Un toplaner puede tener tendencia a splitpushear en situaciones de ventaja pero ser conservador cuando va en desventaja. Un support puede tener tendencia a rotaciones agresivas al mid en los primeros diez minutos. Esos patrones son explotables si el equipo rival no los conoce; son corregibles si el propio equipo los detecta.</p>
+
+    <div class="callout">
+      El jugador que conoce sus propias tendencias estadísticas tiene una ventaja sobre el que solo sigue su instinto. El analista que las conoce antes que nadie puede transformarlas en estrategia.
+    </div>
+
+    <h2>Herramientas y fuentes de datos en la escena profesional</h2>
+
+    <p>El ecosistema de herramientas para análisis en esports ha madurado significativamente. Algunas de las más usadas en la escena profesional de League of Legends:</p>
+
+    <ul>
+      <li><strong>Leaguepedia:</strong> la enciclopedia de referencia de la escena. Contiene datos históricos de partidas, rosters, resultados y estadísticas de torneos de ligas oficiales de todo el mundo. Su API permite exportar datos estructurados para análisis propio.</li>
+      <li><strong>Oracle's Elixir:</strong> una de las bases de datos más completas de estadísticas individuales y por equipo en ligas tier-1. Permite comparaciones cruzadas entre jugadores de diferentes regiones.</li>
+      <li><strong>Plataformas de scouting privadas:</strong> organizaciones de alto presupuesto utilizan herramientas propietarias que agregan datos de partidas en tiempo real con visualizaciones de heatmaps y tracking de posición.</li>
+      <li><strong>Replays nativos:</strong> el cliente de League of Legends permite descargar y revisar replays de partidas de alto nivel. El trabajo de revisión manual sigue siendo insustituible para entender el contexto detrás de las estadísticas.</li>
+    </ul>
+
+    <h2>El impacto del meta en el análisis</h2>
+
+    <p>League of Legends recibe actualizaciones de balance cada dos semanas aproximadamente. Cada parche puede cambiar qué campeones son viables, qué composiciones son dominantes y qué estrategias de mapa funcionan mejor. Eso significa que un análisis de hace dos meses puede ser parcialmente inválido hoy.</p>
+
+    <p>Para un analista, esto implica trabajar con ventanas de tiempo ponderadas: los datos más recientes pesan más que los antiguos. Un equipo que era dominante en dragones hace tres patches puede haber cambiado su priorización completamente al adaptarse al meta actual.</p>
+
+    <h3>Meta local vs meta internacional</h3>
+
+    <p>Otra dimensión importante para el análisis en Latinoamérica es la diferencia entre el meta de las regiones tier-1 (LCK de Corea, LPL de China) y el meta de las ligas locales. Los equipos coreanos y chinos explotan mecánicas del parche con semanas o meses de antelación respecto a las ligas menores.</p>
+
+    <p>Un analista de la escena regional necesita discernir qué del meta internacional es transferible al nivel local y qué no lo es por limitaciones de ejecución mecánica o de coordinación. Imponer estrategias que requieren un nivel de coordinación que el equipo no tiene es un error que puede costar partidas.</p>
+
+    <h2>El futuro: machine learning y análisis predictivo</h2>
+
+    <p>Los equipos más avanzados del mundo ya están incorporando modelos de aprendizaje automático al análisis competitivo. Estos modelos pueden procesar volúmenes de datos de partidas históricas para identificar patrones que serían imposibles de detectar manualmente, predecir probabilidades de victoria en tiempo real basadas en el estado del juego, o sugerir rutas de decisión óptimas según el estado económico de ambos equipos en un momento dado.</p>
+
+    <p>Para la escena latinoamericana, ese nivel de sofisticación todavía está en el horizonte. Pero el camino hacia allá empieza por lo básico: sistemas de registro, hábitos de revisión, y una cultura dentro de los equipos que valore la información sobre la intuición cuando ambas están en conflicto.</p>
+
+    <div class="callout">
+      La analítica no reemplaza al coach ni al jugador. Les da un suelo firme sobre el que pararse cuando la presión competitiva hace que el ruido sea más alto que la señal.
+    </div>
+
+    <h2>Conclusión: los datos como lenguaje común</h2>
+
+    <p>El valor de la analítica de datos en los videojuegos competitivos no está en tener números más bonitos que el rival. Está en que los datos crean un lenguaje común dentro del equipo: un referente objetivo al que coach, analista y jugadores pueden acudir para separar lo que perciben de lo que realmente ocurrió.</p>
+
+    <p>En un ambiente de alta presión como un equipo de esports profesional, donde las emociones y los egos pueden distorsionar la autoevaluación, tener datos confiables es una herramienta de salud organizacional además de una ventaja táctica. Esa es la razón de fondo por la que vale la pena invertir en este trabajo, independientemente del nivel de la liga.</p>
+
+  </div>
+
+</article>
+
+<footer>
+  <p>Juan Sebastián "Hodr" Corso &mdash; Bogotá, Colombia &mdash; Data Analyst</p>
+</footer>
+
+</body>
+</html>
